@@ -29,4 +29,4 @@ echo 'src-git eqosplus https://github.com/sirpdboy/luci-app-eqosplus.git' >>feed
 echo 'src-git poweroffdevice https://github.com/sirpdboy/luci-app-poweroffdevice.git' >>feeds.conf.default
 echo 'src-git src-git netdata https://github.com/sirpdboy/luci-app-netdata.git' >>feeds.conf.default
 echo 'src-git src-git ddnsgo https://github.com/sirpdboy/luci-app-ddns-go.git' >>feeds.conf.default
-echo 'src-git src-git argon https://github.com/jerrykuku/luci-theme-argon.git;18.06' >>feeds.conf.default
+#echo 'src-git src-git argon https://github.com/jerrykuku/luci-theme-argon.git;18.06' >>feeds.conf.default
