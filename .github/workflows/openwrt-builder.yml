@@ -1,4 +1,4 @@
-#
+t#
 # https://github.com/P3TERX/Actions-OpenWrt
 #
 # File: .github/workflows/openwrt-bulder.yml
@@ -19,15 +19,15 @@ on:
       repository_owner:
         description: '仓库所有人'
         required: false
-        default: 'immortalwrt'
+        default: 'openwrt'
       repository_name:
         description: '仓库名'
         required: false
-        default: 'immortalwrt'
+        default: 'openwrt'
       repository_branch:
         description: '分支'
         required: false
-        default: 'openwrt-24.10'
+        default: 'main'
       enable_ssh:
         description: 'Enable SSH debugging?'
         type: boolean
@@ -40,8 +40,8 @@ jobs:
 
     env:
       # 兼容两种触发方式：手动触发（workflow_dispatch）和自动触发（repository_dispatch）
-      REPO_URL: "https://github.com/${{ github.event.inputs.repository_owner || github.event.client_payload.repository_owner }}/${{ github.event.inputs.repository_name || github.event.client_payload.repository_name }}"
-      REPO_BRANCH: ${{ github.event.inputs.repository_branch || github.event.client_payload.repository_branch }}
+      REPO_URL: https://github.com/openwrt/openwrt
+      REPO_BRANCH: main
       FEEDS_CONF: feeds.conf.default
       CONFIG_FILE: 123.config
       DIY_P1_SH: diy-part1.sh
@@ -49,7 +49,7 @@ jobs:
       UPLOAD_BIN_DIR: false
       UPLOAD_FIRMWARE: true
       UPLOAD_RELEASE: true
-      OPENWRT_NAME: immortalwrt
+      OPENWRT_NAME: openwrt
       OPENWRT_NAME1: x86_64
       TZ: Asia/Shanghai
 
